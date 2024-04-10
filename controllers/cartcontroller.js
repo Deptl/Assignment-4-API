@@ -26,7 +26,7 @@ const postCart = async (req, res) => {
     try {
         const cart = await Cart.create(req.body);
         if(!cart){
-            return res.status(404).json({message: "Cart already exist"});
+            return res.status(404).json({message: "Cart Already Exist"});
         }
         res.status(200).json(cart);
     } catch (error) {
